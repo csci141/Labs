@@ -50,7 +50,7 @@ That’s it! Your first python program. It contains comments (which will be igno
 
 Save your program to your lab1 folder (File ->Save as..., Ctrl+S), then run the program by either selecting Run Current Script from the Run menu, click on the green circle with the right-pointing arrow, or press the F5 button on your keyboard. If your code has no syntax errors, you should get something that is similar to the what is shown in Figure 2.
 
-![Thonny IDE showing just the shell.](Picture2.png "Figure 2")
+![Thonny IDE showing just the shell.](thonnyOutput.png "Figure 2")
 
 # Input, Len, and variables
 
