@@ -1,11 +1,11 @@
 
-#CSCI 141
-  #Fall 2022 
-  ##Lab 0: Getting everything set up
-  ##Due Date: Ungraded
+# CSCI 141
+  # Fall 2022 
+  ## Lab 0: Getting everything set up
+  ## Due Date: Ungraded
 
 
-###Purpose
+### Purpose
 The purpose of this lab is meant to introduce you to the tools we'll be using this quarter. If you have questions, be sure to ask the TA. Labs are your opportunity to get personalized help!
 
 ###Collaboration in Lab
