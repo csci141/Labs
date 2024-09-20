@@ -93,7 +93,7 @@ When you get an error message, pay close attention to how to interpret what the 
 
 # Submission
 That’s it for this week’s lab—don’t worry if this seemed simple: future labs will be more involved.
-Before you submit, undo the errors in your code so that your python program runs correctly. Save your .py file, and upload it to Canvas. For this lab, Canvas has been configured to permit only .py submissions. If you have never used Canvas, log into your canvas account, proceed to CSCI141, and you should see an option for items that are open for submission. Click on Lab 1, and select to upload a file. You can submit as many times as you like - we will only grade the latest one. Wise students know to submit early and often to protect against lost files, accidentally missed deadlines, and other minor (but common) problems.
+Before you submit, undo the errors in your code so that your python program runs correctly. Save your .py file, and upload it to Canvas. For this lab, Canvas has been configured to permit only .py submissions. If you have never used Canvas, log into your canvas account, proceed to CSCI141, and you should see an option for items that are open for submission. Click on Lab 1, and select to upload a file. You can submit as many times as you like - we will only grade the latest one: wise students know to submit early and often to protect against lost files, accidentally missed deadlines, and other minor (but common) problems.
 
 # Rubric
 |Item  | points|
