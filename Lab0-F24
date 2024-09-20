@@ -1,1 +1,16 @@
 
+\begin{center}
+  \Large CSCI 141\\
+  \Large Fall 2022 \\
+  \Large Lab 0: Getting everything set up\\
+  \Large Due Date: Ungraded
+\end{center}
+
+\section*{Purpose}
+The purpose of this lab is meant to introduce you to the tools we'll be using this quarter. If you have questions, be sure to ask the TA. Labs are your opportunity to get personalized help!
+
+\section*{Collaboration in Lab}
+You are encouraged to work together with your peers in completing the
+labs; you can discuss problems with a lab partner. In lab, you are allowed to look at other
+students' code and discuss solutions with your peers. \textbf{However, the
+Python submission that you upload to Canvas must be your own. Don't copy and paste or type exactly what you see on another student's screen.} 
