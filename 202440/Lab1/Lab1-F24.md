@@ -26,7 +26,7 @@ We’ll use Thonny as our IDE: integrated Development Environment - a fancy way 
 
 If there are multiple versions of Thonny, use the most recent version that is installed. If you’ve launched Thonny correctly, a screen similar to what is shown belowin Figure 1 should appear. Don’t worry if the version number after ”Python” in the Shell tab differs; as long as the major (first) version number is 3, you’re in good shape.
 
-![The Thonny IDE with menu at the top, commonly used icons beneath it, space to type your code, and at the bottom a Shell to show the result of running your code.](Picture1.jpg "Figure 1")
+![The Thonny IDE with menu at the top, commonly used icons beneath it, space to type your code, and at the bottom a Shell to show the result of running your code.](Picture1.png "Figure 1")
 
 There are two different ways that Thonny can be used. You can use the interpreter (or shell) directly, which will cause each line of code that you type into the Shell section to be executed after you press return, or you can create and save a Python program file, and then run (execute) the file in its entirety. Because you’ll be submitting your python program via Canvas, all instructions in labs and homework assignments will ask you to save a Python program file.
 
@@ -49,5 +49,33 @@ Notice how the IDE colors different parts your code differently. Comments are gr
 That’s it! Your first python program. It contains comments (which will be ignored by the python interpreter), and a single use of the print function, which will print the phrase Hello World to the console.
 
 Save your program to your lab1 folder (File ->Save as..., Ctrl+S), then run the program by either selecting Run Current Script from the Run menu, click on the green circle with the right-pointing arrow, or press the F5 button on your keyboard. If your code has no syntax errors, you should get something that is similar to the what is shown in Figure 2.
+
+![Thonny IDE showing just the shell.](Picture2.png "Figure 2")
+
+# Input, Len, and variables
+
+One important feature of most programs is that they somehow interact with the user and allow the user to input data. The input function in Python is one way to accomplish this: the program to prompts the user and then waits for some input to be entered using the keyboard.
+
+We can call input function with no arguments to effectively pause the program until the user presses enter, as in `input()`
+
+If we provide a string as an argument to input, it will print the string as a prompt before waiting for input.
+
+Once the user provides input, you’ll often want the program to to store whatever the user entered somewhere in memory so that you can refer to that data when needed. Programming languages rely on variables as place holders that “remember” where a piece of data is stored in the computer. The concept of a variable will be discussed extensively in lecture. For the time being, think of a variable as an easy-to-remember name for a piece of data. To set the value of a variable use the assignment operator, `=`. To remind yourself that `=` means the variable on left gets set to a new value, pronounce `=` as ‘gets’.
+
+You’ve learned the basic use of two functions so far: `input` and `print`. Here’s another one: the `len` function, which is short for length, calculates the length (number of characters) of its argument (i.e., whatever is inside the parentheses to the right of `len`).
+
+Add the lines of code below to your Python program. Type the text exactly—double quotes, commas, parentheses, line breaks, etc. – all of it:
+  ```
+  name = input("What is your name? ")
+  name_length = len(name)
+  print("Hello", name)
+  print("You have", name_length, "characters in your name.")
+```
+When executed, the four lines of code print to the console What is your name?, and then wait for the user’s input. Once the user provides input and presses return (enter), then the user’s input is placed into the variable name. The `len` function is invoked to calculate the length of the data in the variable name. The output of the `len` function is placed into the variable name length. The second-to-last print function causes the program to print the phrase Hello followed by the value that is stored in the variable name. Lastly, the count of characters in the user’s name (as calculated by the `len` function) is also output to the console.
+
+Run your program. If your code has no syntax errors, you should get something that is similar to what is in Figure 3.
+
+![Thonny IDE showing the results of the code in the shell.](thonnyOutput2.png "Figure 2")
+
 
 
