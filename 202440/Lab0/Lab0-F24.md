@@ -48,6 +48,9 @@ Notice that you can re-submit to the same assignment in case of making a mistake
 
 The due dates and times for all work is already on Canvas - take a moment now to record the major assignment dates into your personal calendar or organizational tool. Double check that none of the exam times conflict with other classes or other major obligations, as you must notify the professor within the first two weeks for planned absences.
 
+### Exercise groups
+You can use the class Discord to find people who would make good exercise group members with you - and then join the group on the class Canvas page (see 'People' and 'Groups'). You can also quit a group from that page at any time and join a different group if your group has members who are not contributing productively to your learning).
+
 ### Textbook
 We'll use 'Think like a Computer Scientist' as our free book for this class. You can join the class to track your progress here: [[https://runestone.academy/runestone/default/user/login]] class name CSCI141F24 . Use your W# as your username and password, then change your password once you've logged in. If you joined the class after the first day, you may need to send a Canvas message to the Professor to get added.
 
