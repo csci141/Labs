@@ -10,9 +10,7 @@ This lab introduces you to the Linux command line, command line arguments, and e
 
 ## Logging into Linux
 
-Linux is an operating system with much of the same functionality as the Windows or Mac operating systems, but with a slightly different feel. The lab computers are dual boot computers, and when the computer boots up you can specify which of the operating systems (Windows or Ubuntu, which is a flavor of Linux) you want to use.
-
-To log into your CS Linux account, reboot the lab computer if it is currently in Windows; when a menu appears, use the arrow keys to select Ubuntu from the set of options, and press enter to select it. Once it boots, you should be able to enter your username and password; the login prompt should look something like this:
+Linux is an operating system with much of the same functionality as the Windows or Mac operating systems, but with a slightly different feel. The lab computers you'll be using for this class have Linux on them. After they boot, you should be able to enter your username and password; the login prompt should look something like this:
 
 ![Linux Login Prompt](linuxLogin.png)
 
@@ -28,9 +26,9 @@ In this lab, you will learn the very basic elements of how to interact with the 
 
 2. In the terminal, you'll see a **prompt** that ends with a `$` sign. This is called the command line, or command prompt; you'll type commands here to interact with the system. Commands that you issue are interpreted by a program called a shell. The default shell, or command line language on the lab machines  is called `bash`; it is one of the many shells available in Linux.
 
-3. You’ll notice that the `$` is prepended with your username and an `@` followed by the name of the computer that you are logged into. For example, `wehrwes@linux-11:~$` specifies the user `wehrwes` logged into the `linux-11` machine.
+3. You’ll notice that the `$` is prepended with your username and an `@` followed by the name of the computer that you are logged into. For example, `lovelaceA@linux-11:~$` specifies the user `lovelaceA` logged into the `linux-11` machine.
 
-4. Anything you can do with the mouse when interacting with a windows environment you can also accomplish via the command line. In the following steps you will create a new directory (folder), navigate into that folder, and run a Python file, using only the command line. For these instructions, code and/or sample file content or output are displayed in code blocks like the one below. Type commands EXACTLY as they provided, and press return/enter to issue the command. For example:
+4. Anything you can do with the mouse when interacting with a Windows environment you can also accomplish via the command line. In the following steps you will create a new directory (folder), navigate into that folder, and run a Python file, using only the command line. For these instructions, code and/or sample file content or output are displayed in code blocks like the one below. Type commands EXACTLY as they provided, and press return/enter to issue the command. For example:
 
    ```
    whoami
@@ -66,10 +64,10 @@ In this lab, you will learn the very basic elements of how to interact with the 
 
    The `&` is important: this allows you to continue using the terminal window AFTER you launch Thonny.
 
-9. Use Thonny to create a new file called hello_world.py. Create a comment at the top stating author, date, and description, then type in the following code, replacing `Scott` with a name of your choice.
+9. Use Thonny to create a new file called hello_world.py. Create a comment at the top stating author, date, and description, then type in the following code, replacing `Ada` with a name of your choice.
 
    ```python
-   user_name = "Scott"
+   user_name = "Ada"
    print("Hello,", user_name)
    ```
 
@@ -95,13 +93,13 @@ We've seen how to ask the program's user to provide input using the `input` func
 
    Notice that the program runs just fine, but doesn't do anything differently from before - that's because our program currently ignores any command line arguments given to it.
 
-2. The syntax for accessing command line arguments from inside your python program will probably look unfamiliar, because we haven't discussed these Python features yet. However, it will be convenient to use command line arguments even though we won't get around to explaining the syntax until later in the course. For now, try changing **your Python program's code** to the following:
+2. In a few weeks we'll cover some more ways you can use command line arguments to add convenience to testing your code. For now, let's try just accessing them. try changing **your Python program's code** to the following:
 
        import sys
        user_name = sys.argv[1]
        print("Hello,", user_name)
 
-   Don't worry about the details here - take my word for it that `sys.argv[1]` is going to be the first command line argument.
+   This sytax means you want the item in index 1 on the **sys** module's list of **ARG**ument **V**alues. Notice that we had to `import` the sys module - it's not part of the default Python distribution. There are many powerful and exciting modules you can add to Python - we'll learn about more of them later in the class! Thonny comes with these extra modules bundled; if you are using a different IDE and you get an error that it cannot find Sys, you may need to use pip to install Sys or update your environment 'Path' variable. 
 
 3. Remember that when running a program from the command line, we're not in Python, and here arguments are specified without parentheses or commas. To run your updated program, try the same command as before in the terminal:
 
@@ -111,7 +109,7 @@ We've seen how to ask the program's user to provide input using the `input` func
 
    **A helpful command line tip:** If you want to run the same command again, you can press the up arrow key to get the last command run to show up at the prompt; to run it again, simply press enter. You can also press the up arrow multiple times to scroll back through the history of all the commands you've run.
 
-   Try the same command but replace Jesse with a name of your choice - you should see that your program is printing whatever name you specify on the command line.
+   Try the same command but replace DorthyVaughan with a name of your choice - you should see that your program is printing whatever name you specify on the command line.
 
 4. What happens if you run your program without providing a command line argument? Try running this:
 
@@ -134,9 +132,9 @@ We've seen how to ask the program's user to provide input using the `input` func
    python3 hello_world.py Caroline Scott
    ```
 
-   Command line arguments are a little less flexible than using the `input` function because the program can't interactively ask the user for inputs. However, it can be more convenient to take input this way, especially when you're running a program over and over again while testing it: you can simply repeat the same command without having to type the input again.
+   Command line arguments are a little less flexible than using the `input` function because the program can't interactively ask the user for inputs. However, it can be much more convenient to take input this way, especially when you're running a program over and over again while testing it: you can simply repeat the same command without having to type the input again.
 
-6. A final question that we need to answer: we've seen how to provide command line arguments when running a python program from the terminal, but how can we accomplish the same thing in Thonny, where we run a program by simply pressing the green Run button?
+6. A final question that we need to answer: we've seen how to provide command line arguments when running a Python program from the terminal, but how can we accomplish the same thing in Thonny, where we run a program by simply pressing the green Run button?
 
    Thonny lets you specify arguments to the program in a text box at the top of the window, labeled \"Program Arguments\". If you don't see it, you can enable it under the 'View' menu. To run the equivalent of
 
@@ -238,7 +236,7 @@ $$
 
 1.  Download [broken_calculator.py](broken_calculator.py)  and save it to your Lab2 folder.
 
-2.  That file is incomplete. Only two lines of code have been written, which you are not allowed to edit. The rest are comments. Lines of code that say `# COMPLETE THE CODE` you will need to write. Read the comments for each section to get a sense of what code you need to write. Also, the number of COMPLETE THE CODE comments in that file is how many lines of python code I (Scott) wrote in my solution. It's okay if your solution uses fewer lines of code, or more, but each block of code should accomplish what the comment above it specifies.
+2.  That file is incomplete. Only two lines of code have been written, labled *#DO NOT CHANGE THIS LINE *: Do not edit these lines! The rest are comments. Lines of code that say `# TODO: COMPLETE THE CODE` you will need to write. Read the comments for each section to get a sense of what code you need to write. Also, the number of COMPLETE THE CODE comments in that file is how many lines of python code I (your professor) wrote in my solution. It's okay if your solution uses fewer lines of code, or more, but each block of code should accomplish what the comment above it specifies.
 
     **For the lines of code that you write, you are only allowed to use the `print` function, the assignment operator, and the following mathematical operators:**
 
@@ -268,7 +266,7 @@ $$
 
     -   **G:** This requires a single use of the print function.
 
-**In your python code, you CAN make use of periods, but when the program is RUN, the user CAN ONLY enter integer (non decimal) numbers.**
+**In your Python code, you CAN make use of periods, but when the program is RUN, the user CAN ONLY enter integer (non decimal) numbers.**
 
 Here's a sample run of the completed code:
 
@@ -284,6 +282,7 @@ Upload the following files to Canvas:
 
 -   The completed `broken_calculator.py` file that can reproduce the output shown in the above figure
 
+Double check that you've not changed the file names!
 
 # Rubric {#rubric .unnumbered}
 
