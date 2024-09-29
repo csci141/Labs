@@ -1,6 +1,6 @@
 % CSCI 141 - Lab 2
-% Scott Wehrwein
-% Winter 2023
+% Caroline Hardin
+% Fall 2024
 
 **Note for next time: make them run on the terminal *and* in Thonny with cmd line arguments**
 
