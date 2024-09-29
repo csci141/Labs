@@ -64,7 +64,7 @@ You can join at  the link posted on Canvas. Join now and post a message to the l
 ### Submission and rubric
 
 That's it for this week's lab---don't worry if this seemed simple: future
-labs will be more involved. While designed to be mostly completed during the lab time, soem may require up to 2-4 additional hours. If you are struggling to complete your labs on time, talk to your TA or professor about strategies. The labs are designed to prepare you for the larger assignments so be sure to do them in a timely manner!
+labs will be more involved. While designed to be mostly completed during the lab time, some may require up to 2-4 additional hours. If you are struggling to complete your labs on time, talk to your TA or professor about strategies. The labs are designed to prepare you for the larger assignments so be sure to do them in a timely manner!
 
 This lab is ungraded and doesn't have a due date, but it's recommended that you complete it before your next lab! Be sure to read the rubric on future labs closely. 
 
