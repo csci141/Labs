@@ -72,5 +72,5 @@ This lab is ungraded and doesn't have a due date, but it's recommended that you 
 Always read the class manual, of course, but this section is actually about the secret extra credit available to students who read class materials carefully: Find an error in class materials? Spot a place on the Canvas with outdated or inaccurate information? Notice a spot in a posted video where quarter-specific information is said (`This Wednesday turn in A2') or the professor has a sneezing fit (or anything else that ought to be edited out?). Tell the professor and you can unlock bonus extra credit*!
 
 
-*Number of points and assignment it gets applied to is at the discretion of the Professor. Only valid for first person to report it. Additional terms and conditions may apply. Not valid in New Jersey.
+*Number of points and assignment it gets applied to is at the discretion of the Professor. Only valid for first person to report it. A record of your balance is kept in the 'Bug Bounty' assignment on Canvas. Additional terms and conditions may apply. Not valid in New Jersey.
 
