@@ -152,7 +152,7 @@ We've seen how to ask the program's user to provide input using the `input` func
 
 Inevitably, you will write code that will have bugs, or errors, no matter how experienced of a programmer you might be. Knowing how to find and fix bugs is a critical skill for all programmers.
 
-Download [bad_code.py](bad_code.py) (right click the link and select "Save as...") and save it in your lab2 folder.
+Download [bad_code.py](bad_code.py) (right click the link and select "Save link as..." or left click on it then click the 'Download raw file' button) and save it in your lab2 folder.
 
 #### Commenting Code
 
