@@ -99,7 +99,7 @@ We've seen how to ask the program's user to provide input using the `input` func
        user_name = sys.argv[1]
        print("Hello,", user_name)
 
-   This sytax means you want the item in index 1 on the **sys** module's list of **ARG**ument **V**alues. Notice that we had to `import` the sys module - it's not part of the default Python distribution. There are many powerful and exciting modules you can add to Python - we'll learn about more of them later in the class! Thonny comes with these extra modules bundled; if you are using a different IDE and you get an error that it cannot find Sys, you may need to use pip to install Sys or update your environment 'Path' variable. 
+   This syntax means you want the item in index 1 on the **sys** module's list of **ARG**ument **V**alues. Notice that we had to `import` the sys module - it's not part of the default Python distribution. There are many powerful and exciting modules you can add to Python - we'll learn about more of them later in the class! Thonny comes with these extra modules bundled; if you are using a different IDE and you get an error that it cannot find Sys, you may need to use pip to install Sys or update your environment 'Path' variable. 
 
 3. Remember that when running a program from the command line, we're not in Python, and here arguments are specified without parentheses or commas. To run your updated program, try the same command as before in the terminal:
 
@@ -152,7 +152,7 @@ We've seen how to ask the program's user to provide input using the `input` func
 
 Inevitably, you will write code that will have bugs, or errors, no matter how experienced of a programmer you might be. Knowing how to find and fix bugs is a critical skill for all programmers.
 
-Download [bad_code.py](bad_code.py) (right click the link and select "Save as...") and save it in your lab2 folder.
+Download [bad_code.py](bad_code.py) (right click the link and select "Save link as..." or left click on it then click the 'Download raw file' button) and save it in your lab2 folder.
 
 #### Commenting Code
 
