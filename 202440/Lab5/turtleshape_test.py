@@ -13,7 +13,7 @@ import turtleshape as ts # import student functions from turtleshape.py
 
 def test_draw_square(t, x, y):
     """ Draws a pattern of squares of different sizes, starting at (x,y) """
-    # tests draw_sqare
+    # tests draw_square
     t.up()
     t.goto(x, y) # move here without drawing
     t.down()
@@ -42,7 +42,7 @@ def test_draw_rectangle(t, x, y):
 
 def test_draw_triangle(t, x, y):
     """ Draws a pattern of triangles of different sizes, starting at (x,y) """
-    # tests draw_sqare
+    # tests draw_triangle
     t.up()
     t.goto(x, y) # move here without drawing
     t.color("purple")
