@@ -250,7 +250,7 @@ def teleport(t, x, y):
     """
 ```
 
-When basic movement is working, the gradient-colored grid of dots should appear as in the the output image above when `test_teleport` is uncommented in `turtleshape_test.py`. When the pen is correctly restored to its previous state, the vertical red lines should appear as in the output image above.
+When basic movement is working, the gradient-colored grid of dots should appear as in the output image above when `test_teleport` is uncommented in `turtleshape_test.py`. When the pen is correctly restored to its previous state, the vertical red lines should appear as in the output image above.
 
 #### Screenshot
 
@@ -323,7 +323,7 @@ This lab is worth 10 points.
 * .5 points:  `teleport` works correctly
 
 * .5 points:  Your drawing code is is inside a main guard in `turtleshape.py`
-* 2 points:  Your drawing code uses at least one loop and two of the function
+* 2 points:  Your drawing code uses at least one loop and two of the functions
 * .5 points: Your drawing code runs in under a few seconds.
 
 [^1]: I didn't call it `sum` because that's already the name of a builtin function; it's syntactically valid to create a variable with that name, but it "hides" the builtin function so you can't use it anymore because `sum` now refers to a variable. It's good practice to avoid this sort of "hiding" of built-in functions.
