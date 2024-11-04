@@ -62,7 +62,7 @@ Also notice how the whitespace (tabs and spaces) are used. Everything which is p
 
 ### Triple-Quoted Strings
 
-Notice that the lines directly after after the function header (the line with the `def` keyword) contain a **triple-quoted string**. Enclosing a string in triple quotes is like using single or double quotes, except that newlines are allowed in triple-quoted strings.
+Notice that the lines directly after the function header (the line with the `def` keyword) contain a **triple-quoted string**. Enclosing a string in triple quotes is like using single or double quotes, except that newlines are allowed in triple-quoted strings.
 
 ```
 my_str = "a normal string
