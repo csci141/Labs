@@ -36,7 +36,7 @@ From these observations, your supervisor has decided that your program can have 
 3.  `prompt_user`, which receives two arguments and returns one value.
     * The first argument, of type `str`, is the text of the question that the user is prompted. In the example output above, prompt_user is called with the first argument set to `"length of the room"`, `"width of the room"` and `"shape of room 1, square or rectangle"` on different occasions.
     * The second argument designates the return type of the function. Since the user input always comes in as a string, you'll need to use type conversion function(s) to convert the user's input into the appropriate type of data to be returned. 
-    * Since invalid input would cause the whole program to crash and the user to loose their work, this function also handles the work of checking if the user's input is valid. 
+    * Since invalid input would cause the whole program to crash and the user to lose their work, this function also handles the work of checking if the user's input is valid. 
     
         * If they wanted an integer, they should be prompted repeatedly until they enter a digit which is greater than 0. (hint: Check out the String methods for some tools which will help here). 
 
