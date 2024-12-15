@@ -24,7 +24,7 @@ In addition to having office365, every student in a CS class gets account storag
 
 We’ll use Thonny as our IDE: integrated Development Environment - a fancy way of saying a program to program in. You can download it for free from [[http://www.thonny.org]] . The lab machines all have Thonny installed already. If you want to use it on your own computer, you can download it for free from [[http://www.thonny.org]] . Once you’ve logged into a lab machine, start Thonny - you can see several ways to start applications in Ubuntu Linux on this page: [[https://help.ubuntu.com/stable/ubuntu-help/shell-apps-open.html.en]]. 
 
-If there are multiple versions of Thonny, use the most recent version that is installed. If you’ve launched Thonny correctly, a screen similar to what is shown belowin Figure 1 should appear. Don’t worry if the version number after ”Python” in the Shell tab differs; as long as the major (first) version number is 3, you’re in good shape.
+If there are multiple versions of Thonny, use the most recent version that is installed. If you’ve launched Thonny correctly, a screen similar to what is shown below in Figure 1 should appear. Don’t worry if the version number after ”Python” in the Shell tab differs; as long as the major (first) version number is 3, you’re in good shape.
 
 ![The Thonny IDE with menu at the top, commonly used icons beneath it, space to type your code, and at the bottom a Shell to show the result of running your code.](Picture1.png "Figure 1")
 
@@ -60,7 +60,7 @@ We can call input function with no arguments to effectively pause the program un
 
 If we provide a string as an argument to input, it will print the string as a prompt before waiting for input.
 
-Once the user provides input, you’ll often want the program to to store whatever the user entered somewhere in memory so that you can refer to that data when needed. Programming languages rely on variables as place holders that “remember” where a piece of data is stored in the computer. The concept of a variable will be discussed extensively in lecture. For the time being, think of a variable as an easy-to-remember name for a piece of data. To set the value of a variable use the assignment operator, `=`. To remind yourself that `=` means the variable on left gets set to a new value, pronounce `=` as ‘gets’.
+Once the user provides input, you’ll often want the program to store whatever the user entered somewhere in memory so that you can refer to that data when needed. Programming languages rely on variables as place holders that “remember” where a piece of data is stored in the computer. The concept of a variable will be discussed extensively in lecture. For the time being, think of a variable as an easy-to-remember name for a piece of data. To set the value of a variable use the assignment operator, `=`. To remind yourself that `=` means the variable on left gets set to a new value, pronounce `=` as ‘gets’.
 
 You’ve learned the basic use of two functions so far: `input` and `print`. Here’s another one: the `len` function, which is short for length, calculates the length (number of characters) of its argument (i.e., whatever is inside the parentheses to the right of `len`).
 
