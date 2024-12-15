@@ -8,7 +8,7 @@ This lab gives you practice with Python loops and Turtle graphics. You'll comple
 
 ## 1. `triangle.py`
 
-Your first task is to write a program prints a sideways isosceles triangle made of asterisks ("`*`") with a maximum width specified by the user via a command line argument. For example, a width of 3 would print:
+Your first task is to write a program which prints a sideways isosceles triangle made of asterisks ("`*`") with a maximum width specified by the user via a command line argument. For example, a width of 3 would print:
 
 ``` {samepage="true"}
 *
