@@ -62,7 +62,7 @@ You will write a program that tells the user if, based on their age and years of
 
 3. Writing pseudocode is a great way to get your ideas on paper in a semi-structured way to help guide you when you write actual code. I often write pseudocode before I write Python because it helps me think through the steps I need to take before I start thinking about the details of expressing those steps in Python.
 
-    A lot of programmers like using a whiteboard to sketch out a flowchart of the code to make sure they understand the basic flow, then they block in the parts as comments. Finally, they gradually sketch in different parts of the code, knocking off one part at at time. If this hasn’t been your process before, try it now! Future assignments will be get increasingly difficult to complete without some process for carefully breaking down your thinking about your solution approach, so it’s good to practice it on an easier assignment. 
+    A lot of programmers like using a whiteboard to sketch out a flowchart of the code to make sure they understand the basic flow, then they block in the parts as comments. Finally, they gradually sketch in different parts of the code, knocking off one part at a time. If this hasn’t been your process before, try it now! Future assignments will be get increasingly difficult to complete without some process for carefully breaking down your thinking about your solution approach, so it’s good to practice it on an easier assignment. 
 
    Here is some pseudocode I wrote for this program:
 
