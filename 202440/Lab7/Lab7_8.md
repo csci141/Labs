@@ -8,7 +8,7 @@
 
 The objective of the following two labs is to implement a conversational agent, commonly known as a
 chatbot. Users of the program should have a ChatGPT-like experience through a command-line interface.
-This assignment will provide you with hands-on experience in implementing Large Langauge Models (LLMs)
+This assignment will provide you with hands-on experience in implementing Large Language Models (LLMs)
 and working with third-party APIs in Python.
 
 ### Objective
@@ -37,7 +37,7 @@ tracks edits, and explains your coding decisions, which makes it easier to troub
 your code in the future. Documenting your experiences also encourages you to reflect on the challenges and
 solutions you encountered while creating the program. In the professional world, documentation is key to
 effective collaboration, ensuring that others can understand, maintain, and build on your work. By practic-
-ing this skill now, youll develop habits that will make you a more organized and efficient programmer over
+ing this skill now, you'll develop habits that will make you a more organized and efficient programmer over
 time. This task serves as an important pedagogical tool, fostering the ability to critically assess AI-generated
 code, which is a crucial skill in the era of AI-assisted programming. It also allows you to demonstrate their
 understanding of Python programming beyond merely writing code, by evaluating and reflecting on code
@@ -239,7 +239,7 @@ Parameters:
     set to 2048, meaning that the model will generate at most 2048 tokens for this query.
 - stop: A list of tokens at which the model should stop generating further output. In this case, the token
     \nis given, meaning that the model will stop producing output when a new line is generated.
-- stream: A boolean flag indicating whether to stream the output. Ifstreamis True, an iterator with
+- stream: A boolean flag indicating whether to stream the output. Ifstreamis True, an iterator will
     be returned, allowing you to print each token as they are generated. Ifstreamis False, the entire text
     completion will be returned at once.
 
