@@ -4,7 +4,7 @@
 
 ## Introduction
 
-By this time in the quarter you've seen functions in lecture, in lab, and from here on you will see them in most of the program of the days.
+By this time in the quarter you've seen functions in lecture, in lab, and from here on you will see them in most of the programs of the day.
 
 In this lab, you'll write a program that calculates the total square footage in a home. Imagine you are working for a construction company that builds homes with only square or rectangular rooms. The houses vary in size, with as little as 1 room and up to 100s. **Your task is to write a program that will prompt the user to input the number of rooms and their dimensions, and which then calculates the total square footage of the home**. Two invocations of such a program are shown below.
 
