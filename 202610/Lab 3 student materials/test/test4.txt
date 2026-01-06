@@ -1,0 +1,3 @@
+cloudy
+30
+coat.*hat
