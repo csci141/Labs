@@ -1,12 +1,12 @@
 
 # CSCI 141
-  # Fall 2024 
+  # Winter 2025
   ## Lab 0: Getting everything set up
   ## Due Date: Ungraded
 
 
 ### Purpose
-The purpose of this lab is meant to introduce you to the tools we'll be using this quarter. If you have questions, be sure to ask the TA. Labs are your opportunity to get personalized help! The first week of classes you won't have in-person labs, so read this document so you can hit the ground running.
+The purpose of this lab is meant to introduce you to the tools we'll be using this quarter. If you have questions, be sure to ask the TA. Labs are your opportunity to get personalized help! The first week of classes you won't have required in-person labs, so read this document so you can hit the ground running.
 
 ### Collaboration in Lab
 You are encouraged to work together with your peers in completing the
@@ -24,7 +24,7 @@ Zoom is used occasionally as circumstances arise, both for lab and for lecture. 
 
 Zoom calls can also be joined by phone. If you wish to do so, check the syllabus for more information about call in number (or email your TA/professor).
 
-Often in lecture we'll do in class exercises - the prompts will be posted for reference. Find the link on Canvas under the 'General' tab for the in class exercises folder and make sure you can see the files.
+Often in lecture we'll do in class exercises - the prompts will be posted for reference. Find the link on Canvas from the 'Schedule of topics, readings, and assignments'.
 
 ### Backing up your files
 
@@ -52,21 +52,21 @@ The due dates and times for all work is already on Canvas - take a moment now to
 You can use the class Discord to find people who would make good exercise group members with you - and then join the group on the class Canvas page (see 'People' and 'Groups'). You can also quit a group from that page at any time and join a different group if your group has members who are not contributing productively to your learning).
 
 ### Textbook
-We'll use 'Think like a Computer Scientist' as our free book for this class. You can join the class to track your progress here: [[https://runestone.academy/runestone/default/user/login]] class name CSCI141F24 . Use your W# as your username and password, then change your password once you've logged in. If you joined the class after the first day, you may need to send a Canvas message to the Professor to get added.
+We'll use 'Think like a Computer Scientist' as our free book for this class. https://runestone.academy/ns/books/published/thinkcspy/index.html If you sign up for an account, you can track your progress! 
 
 You can find the schedule of readings linked to from the front page of Canvas. Note that the topics and readings may be updated during the quarter so if you print it you'll want to check back periodically (better yet, just rely on the digital version).
 
 ### Discord
 Discord is a place to discuss the material, post questions, and even do voice or video chat! It's free, and you can visit it in your browser, install the program, or get the app for your phone. It's not required to join the class discord, however, it is highly recommended. 
 
-You can join at  the link posted on Canvas. Join now and post a message to the lab0 channel introducing yourself. If you have trouble joining, let your TA know.
+You can join at Discord the link posted on Canvas. Join now and post a message to the lab0 channel introducing yourself. If you have trouble joining, let your TA know.
 
 ### Submission and rubric
 
 That's it for this week's lab---don't worry if this seemed simple: future
-labs will be more involved. While designed to be mostly completed during the lab time, some may require up to 2-4 additional hours. If you are struggling to complete your labs on time, talk to your TA or professor about strategies. The labs are designed to prepare you for the larger assignments so be sure to do them in a timely manner!
+labs will be more involved. While designed to be mostly completed during the lab time, some may require up to 2-6 additional hours. If you are struggling to complete your labs on time, talk to your TA or professor about strategies. The labs are designed to prepare you for the larger assignments so be sure to do them in a timely manner!
 
-This lab is ungraded and doesn't have a due date, but it's recommended that you complete it before your next lab! Be sure to read the rubric on future labs closely. 
+This lab is ungraded and doesn't have a due date or submission, but it's recommended that you complete it before your next lab! Be sure to read the rubric on future labs closely. 
 
 ### Read the Syllabus
 Always read the class manual, of course, but this section is actually about the secret extra credit available to students who read class materials carefully: Find an error in class materials? Spot a place on the Canvas with outdated or inaccurate information? Notice a spot in a posted video where quarter-specific information is said (`This Wednesday turn in A2') or the professor has a sneezing fit (or anything else that ought to be edited out?). Tell the professor and you can unlock bonus extra credit*!
