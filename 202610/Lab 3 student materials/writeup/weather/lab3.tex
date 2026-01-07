@@ -1,0 +1,280 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{alltt}
+\usepackage{amsmath}
+\usepackage{minibox}
+\usepackage{graphicx}
+\oddsidemargin -0.0in
+\topmargin -0.5in
+\textwidth 6.25in
+\textheight 9.25in
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+
+\newcommand{\ttt}[1]{\texttt{#1}}
+
+\begin{document}
+
+\begin{center}
+  \Large CSCI 141 - Fall 2019 \\
+  \Large Lab 3: Conditionals and Boolean Logic\\
+  \Large Due Date: Friday, October 18th at 9:59pm
+\end{center}
+
+\section*{Introduction}
+This lab gives you practice with \ttt{if} statments (also sometimes called
+\textit{conditional}, or \textit{selection} statements. In the process, you'll
+also get some more experience with Boolean operators. The idea is the following:
+your goal is to write a program that recommends what clothing items to wear
+based on the weather conditions indicated by a user.
+
+If you have questions, be sure to ask the TA: your TA is there to help you!  By
+now you've seen how to use Thonny on both your Windows and Linux accounts. You
+are free to select whichever operating system you want to use.
+
+\section{Setup}
+We recommend creating a new directory/folder called \textit{lab3} on your N
+drive (Windows) or in your home directory (Linux). In your lab3 directory,
+create a new Python file \texttt{clothing\_picker.py}.
+
+\section{Unary Selection}
+\textit{Unary selection} is a fancy name for a simple \texttt{if} statement.
+You've seen these already in lecture: the \texttt{if} statement allows you to
+execute a sequence of statements (or a \textit{code block}) if a given
+\textbf{boolean expression} evaluates to \ttt{True}, or skip over the code block
+if the expression evaluates to \ttt{False}. 
+
+The code block inside an \ttt{if} statement must contain one or more statements.
+In Python, the code block associated with an \ttt{if} statement is distinguished
+by indenting lines of code immediately underneath the line containing the
+\texttt{if} keyword of the selection statement. The syntax and structure of a
+unary selection statement are shown below:
+
+\begin{alltt}
+if \textit{boolean_expression}:
+    \textit{statement\_1}
+    \textit{statement\_2}
+    \textit{statement\_3}
+\end{alltt}
+
+For this first version, write a single unary selection statement that checks
+whether the user has specified whether it is windy or not.  If it is windy, the
+program should tell the user not to bring an umbrella.
+Pseudocode and sample input and output for this first version of your program
+are given below. 
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Ask the user if it is windy
+\item Save user input into a variable
+\item If it is windy, print ``Don't bring an umbrella because it's windy.''
+\item If it is not windy, do nothing
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=1.25in]{ifwindy.png}
+  \caption{Sample output for the initial version.}
+\end{figure}
+
+\section{Binary Selection}
+
+We've also discussed binary selection, which is a fancy name for an
+\ttt{if}/\ttt{else} statement. It has an \ttt{if} clause and an indented code
+block just as in unary selection, but it also has an \ttt{else} clause and code
+block that is executed whenever the Boolean expression in the if clause
+evaluates to \ttt{False}.  The syntax and structure of a binary selection
+statement are shown below below, where statements 1 through 3 are the code block
+for the \ttt{if} clause, and statements 4 and 5 constitute the code block for
+the \ttt{else} clause.
+
+\begin{alltt}
+if \textit{boolean_expression}:
+    \textit{statement\_1}
+    \textit{statement\_2}
+    \textit{statement\_3}
+else:
+    \textit{statement\_4}
+    \textit{statement\_5}
+\end{alltt}
+
+Next, modify your code so that it still prompts the user to answer whether it is
+windy, but this time if the answer is ``no'', then have the program output, ``It is
+not windy. Bring an umbrella if you wish.'' If it is windy, the program should
+output the same as before. Sample input and output for this second version of
+your program is shown below.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[height=0.75in]{ifelsewindy.png}
+  \caption{Sample output, Binary Selection}
+\end{figure}
+
+\pagebreak
+\section{Boolean expression with logical operators}
+
+We've discussed in lecture how to use more complicated boolean expressions;
+specifically, the logical operators \texttt{or}, \texttt{and}, and \texttt{not}
+were presented.  Modify your code to also prompt the user to for whether it is
+sunny or cloudy. Retain the \texttt{if, else} code as you've already written,
+except change the Boolean expression to check if it is windy and sunny. If the
+user specifies yes, then the output should be ``It's windy and sunny, so bundle
+up and don't bring an umbrella.'' If it is not both windy and sunny, have the
+program output, ``It is not both windy and sunny.''
+
+Pseudocode for the revised version of your program is shown below. Sample output
+is shown in Figure \ref{fig:windsun}.
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Ask user if it is windy, save input  into a variable
+\item Ask user if it is sunny or cloudy, save input into a second variable
+\item If it is windy and sunny, output ``It's windy and sunny, so bundle up and
+  don't bring an umbrella.''
+\item Otherwise, output ``It is not both windy and sunny.''
+\end{itemize}
+
+\textbf{Note:} Here and in all further parts of the lab, you may assume that the
+user responds to the sunny/cloudy prompt with the exact input \ttt{"sunny"} or
+\ttt{"cloudy"}; you do not need to handle other inputs. Also notice that the
+instructions above are phrased only in terms of \texttt{sunny} and \texttt{not
+sunny}.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[height=1.25in]{windsun.png}
+  \caption{Sample output for boolean expression with logical
+  operators\label{fig:windsun}}
+\end{figure}
+
+\newpage
+\section{Nested if statements}
+
+As shown in lecture, it is possible to nest an entire selection statement
+(\ttt{if} statement with an \ttt{else} clause) inside of a code block of an
+existing \ttt{if} statement. The syntax is shown in below. To make it
+easier to see, a box has been drawn around the outer-most and inner most if
+statements.
+\begin{alltt}
+if \textit{boolean_expression_1}:
+    \minibox[frame]{if \textit{boolean_expression_2}:\\
+    \textit{statement_1}\\
+else:\\
+    \textit{statement_2}}
+else:
+    \textit{statement\_4}
+    \textit{statement\_5}
+\end{alltt}
+
+Modify your code so that the outer condition
+(\ttt{\textit{boolean\_expression1}}) checks if it is windy, and the inner
+condition (\ttt{\textit{boolean\_expression2}}) checks whether it is sunny. If it is
+windy and sunny, print ``It is windy and sunny,''; if it is windy and not sunny,
+print ``It is windy and not sunny''; if it is not windy, print  ``It is not
+windy.'' Sample output is shown In Figure~\ref{nestedIf}.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[height=1.7in]{nested.png}
+\caption{Output of program with nested conditionals}
+\label{nestedIf}
+\end{figure}
+
+\section{Clothing picker: chained conditionals}
+
+One more possible clause in a conditional statement an \ttt{elif} clause. An
+elif, which is short of else if, contains a Boolean expression that is checked
+ONLY if the first \ttt{if}'s condition, and all preceding
+\ttt{elif} conditions all evaluate to False. Unlike an \ttt{else}, whose code
+block is ALWAYS executed if the if condition evaluates to False, the code block
+of an elif is executed only if the conditional of the elif evaluates to True.
+Note that including an \ttt{else} is never syntactically required; an \ttt{if}
+statement can have zero or more \ttt{elif} clauses and zero or one \ttt{else}
+clause. In the program you submit, you should make sure you're demonstrating at
+least one use of an \ttt{else} clause.
+
+This time, have your program prompt the user to ask if it is sunny, and also ask
+for the \textbf{temperature}.  Modify your program so that the \ttt{else} code
+block has a nested if statement as well. Both of the nested if statements will
+now have \ttt{if}, \ttt{elif}, and \ttt{else} clauses (see sample below). The
+outer condition should check whether it is sunny, and inner \ttt{if/elif/else}
+should make recommendations according to the temperature and whether or not it
+is sunny. Don't forget to convert the temperature input to an \ttt{int} and
+recall that you can use comparison operators like \ttt{<=} and \ttt{>=} to get
+the boolean result of numerical comparisons.
+
+Write appropriate conditions that rely on the user's input (whether it is sunny and the temperature), and write appropriate print statements that produce the clothing recommendations indicated in Figure~\ref{pickerGoal}.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.8\linewidth]{Picture2.png}
+\caption{Schematic of logic for clothing picker}
+  \label{pickerGoal}
+\end{figure}
+
+Table~\ref{testTable} shows the sunny/temperature combinations and their
+corresponding output value (clothing recommendation) that your program should
+print. Sample output is shown in Figure~\ref{fig:pickerOutput}.
+
+\begin{center}
+\begin{table}
+\caption{Sample input/output combinations}
+    \label{testTable}
+  \begin{tabular}{ | l | l | p{9cm}|}
+    \hline
+    Sunny & Temperature & Output \\
+    \hline
+    Yes &	Less than 60 degrees &	Wear a sweater \\
+    \hline
+    Yes	& 60 degrees exactly	 & Woo hoo, it is 60 degrees. Wear what you want \\
+        \hline
+    Yes	& More than 60 degrees &	Wear a t-shirt and flip flops \\
+        \hline
+    No	& Less than 40 degrees	& Wear a coat and hat \\
+        \hline
+    No	& Between 40 and 50 degrees	& Not quite freezing, but close. Bundle up \\
+        \hline
+    No &	50 degrees exactly	& A jacket is best \\
+        \hline
+    No &	More than 50 degrees	& Wear a long sleeved shirt \\
+  \hline
+  \end{tabular}
+  \end{table}
+\end{center}
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[height=4in]{chained.png}
+    \caption{Sample clothing picker program output. Note that this does not
+    display all possible cases in the table above, but your program must work
+    for all of them.}
+  \label{fig:pickerOutput}
+\end{figure}
+
+\section*{Submission}
+
+Upload \texttt{clothing\_picker.py} to Canvas for grading.
+
+\section*{Rubric}
+
+\begin{center}
+  \begin{tabular}{ |p{13cm}|l|}
+    \hline
+    Your file is called \texttt{clothing\_picker.py} & 1 point \\
+    \hline
+    The top of \ttt{clothing\_picker.py} has comments including
+    your name, date, and a short description of the program's purpose. Comments
+    placed throughout the code explain what the code is doing. & 3 \\
+  \hline
+    Your program makes use of \ttt{if}, \ttt{elif}, and \ttt{else}. & 6 \\
+    \hline
+    Your program correctly prompts the user and stores the user's input. & 3 \\
+    \hline
+    Your code provides unique clothing combinations for each of the sunny/temperature combinations in the table in this lab handout. & 7 \\
+    \hline
+    Total & 20 points\\
+    \hline
+  \end{tabular}
+\end{center}
+
+\end{document}
