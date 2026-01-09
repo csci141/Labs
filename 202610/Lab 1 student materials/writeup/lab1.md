@@ -1,6 +1,6 @@
 % CSCI 141 - Lab 1
-% Scott Wehrwein
-% Fall 2025
+% Caroline Hardin
+% Winter 2026
 
 ##### Goals
 
@@ -55,7 +55,7 @@ As a first step, you'll recreate the quintessential Hello World program that we 
 
 Type the following into the editor window of python (edit your file) the following (use your name and the current date):
 
-      # Author: Scott Wehrwein
+      # Author: Ada Lovelace
       # Date: April 1, 2025
       # Description: A hello world program for CSCI 141 Lab 1
       print("Hello World")
