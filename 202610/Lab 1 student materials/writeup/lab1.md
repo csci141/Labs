@@ -2,22 +2,8 @@
 % Caroline Hardin
 % Winter 2026
 
-##### Goals
-
-* Practice writing and running Python programs in Python using the Thonny IDE
-* Get used to accessing user input from (a) prompts using the `input` function, and (b) program arguments using `sys.argv`.
-
-## Introduction and Preliminaries
-
-The purpose of this lab is to give you some hands-on practice writing Python programs in Thonny, and get accustomed to two ways of accepting input from a user of your programs. The lecture videos about what programming is about and shows a few examples of very short Python programs. In this lab, you'll expand on upon these examples.
-
-Since there's a wide variety of backgrounds in this class, everyone will progress at different speeds through this lab - that's ok! Most students should have enough time to complete the lab assignment during the lab session, but if you do not, be sure to upload your submission to Canvas by the due date. If you have questions, be sure to ask the TA. Ask questions often. Labs are your opportunity to get personalized help!
-
-### A Note on Notation
-
-There are two basic fonts in use in this document (this is common to many other help documents and computer books you will use). One is the font that I have used so far in this document; the second is `this font`, which is a fixed width font that I will use to denote exact things you should type, exact names of menus to use, website addresses and so on. Sometimes you'll see this displayed as a code block like this:
-
-``` python
+import pytest
+import subprocess
 import sys
 print(sys.argv[1])
 ```
@@ -214,8 +200,81 @@ Before you submit, make sure all three of your programs work correctly and do no
 
 This lab is graded out of 10 points.
 
-* 3 points: The top of each program file contains a comment including author, date, and description
+def run_file(file, program_input, *args):
+    ''' runs an external python program:    file
+        with command line arguments:        args
+        then gives user input:              program_input
+    '''
+    execution_array = [sys.executable, file]
+    if args != None:
+        execution_array.extend(args)
 
-* 2 points: `lab1A.py` prints the correct output
-* 2 points: `lab1B.py` prints the correct output
-* 3 points: `lab1C.py` prints the correct output
+    print("execution array:", execution_array)
+    print("input:", program_input)
+
+    process = subprocess.Popen(
+        execution_array,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+
+    stdout, stderr, = process.communicate(input=program_input)
+    return stdout.strip(), stderr, process.returncode
+
+
+@pytest.mark.parametrize("name", [
+    ('Scott'),
+    ('Alex'),
+    ('Tom'),
+    ('Callie'),
+    ('Greg'),
+    ('Richard'),
+    ('Tommy'),
+    ('Wishbone')
+])
+def test_a(name):
+    '''Tests the output of lab1A.py to see it contains the correct name and length'''
+    name_length_str = ' ' + str(len(name)) + ' '
+    out, err, code = run_file('lab1A.py', (name+'\n'))
+
+    assert err == '' 
+
+    assert name in out
+    assert name_length_str in out
+
+
+@pytest.mark.parametrize("num", [
+    (3), (-3), (0)
+])
+def test_b(num):
+    '''Tests the output of lab1B.py on different numbers'''
+    out, err, code = run_file('lab1B.py', '', str(num))
+
+    assert err == ''
+
+    try:
+        assert int(out) == (num + 3)
+    except:
+        pass
+
+@pytest.mark.parametrize("num_a,num_b", [
+    (1, 1),
+    (1, -1),
+    (-1, 4),
+    (0, 0),
+])
+def test_c(num_a, num_b):
+    '''Tests the output of lab1C.py on different number combos'''
+    out, err, code = run_file('lab1C.py', '', str(num_a), str(num_b))
+
+    assert err == ''
+
+    try:
+        assert int(out) == (num_a + num_b)
+    except:
+        pass
+
+pytest.main(["test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])
+
