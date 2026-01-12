@@ -192,13 +192,12 @@ $$
 M = (P-D) \frac{r (1 + r)^N}{(1+r)^N - 1}
 $$
 
-Where: $$\begin{aligned}
-  M &= \mbox{The monthly payment}\\
-  P &= \mbox{The price of the home}\\
-  D &= \mbox{The down payment amount}\\
-  N &= \mbox{The number of months over which the loan will be paid off}\\
-  r &= R*.01/12 \mbox{, the monthly interest rate (the yearly percentage converted to a decimal and divided by 12)}\\
-\end{aligned}$$
+Where: 
+- **M** — monthly payment  
+- **P** — price of the home  
+- **D** — down payment amount  
+- **N** — number of months over which the loan will be paid off  
+- **r** — monthly interest rate (`R × 0.01 / 12`, where `R` is the annual percentage rate)
 
 Write a program called `mortgage.py` that takes command line arguments for $P, D, N,$ and $R$ (in that order), and outputs the monthly payment amount $M$. Notice that the user enters $R$, the annual interest rate as a percentage (e.g., 3.7), but the formula uses $r$, the monthly interest rate (e.g., 0.00308).
 
