@@ -135,16 +135,14 @@ Let's look at an example of how this could work before we start writing any code
 -   The first decimal times the second decimal
 
 Notice that for each decimal, we also multiply in a factor of 0.1 to make sure that it is correctly weighted in the final product. In our example, the calculation looks like this: 
-$$
-\begin{align}
-20.4 * 17.7 &=  (20*17)\\
-              &+  (20 * 7 * 0.1)\\
-              &+  (4 * 0.1 * 17)\\
-              &+  (4 * 0.1 * 7 * 0.1)\\
-              &=  340 + 14 + 6.8 + 0.28\\
-              &= 361.08 
-\end{align}
-$$
+
+20.4 * 17.7 =  (20*17)
+              +  (20 * 7 * 0.1)
+              +  (4 * 0.1 * 17)
+              +  (4 * 0.1 * 7 * 0.1)
+              =  340 + 14 + 6.8 + 0.28
+              = 361.08 
+
 
 1.  Download [broken_calculator.py](broken_calculator.py)  and save it to your `lab2` folder.
 
