@@ -201,7 +201,7 @@ Write a program called `money_translator.py` that asks the user for the four pie
 
 Here's a sample invocation of the program:
 
-![money_translator.png](Sample run of money translator)
+![Sample run of money translator](money_translator.png)
 
 #### Test Cases
 
