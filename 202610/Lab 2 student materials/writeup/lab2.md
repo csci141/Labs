@@ -207,9 +207,9 @@ You can check your program's correctness by making sure it matches the output fo
 
 |    Net worth of donor in millions  | Donation amount |  Average net worth  | Scaled donation amount |
 | ----- | -------- | -------- | --------- |
-|   1 | 100 |  100,000 | $8.76     |
-|    .2     | 1000 | 80,000  | $356.26   |
-|    240,000 | 5,000,000 |  40,000  | $0.34   |
+|   1 | 100 |  100,000 | $8.57     |
+|    .2     | 1000 | 80,000  | $349.06  |
+|    240,000 | 5,000,000 |  40,000  | $0.51   |
 
 If you find it tedious to type in the amounts while testing, you may wish to substitute in command line arguments during the development, and switch that out for the input statements after it's working.
 
