@@ -1,27 +1,33 @@
-# Author: Caroline Hardin
-# Date: 1/13/2026
-# Solution code for money translator 
+# Author:
+# Date:
+# Description:
 
+#be sure format_as_money.py is in the same folder
 from format_as_money import format_as_dollars
 
-donors_name = input("The name of the person making the donation: ")
-print(donors_name, end = "")
+#2026 numbers
+fed_poverty_level = 15650
 
-their_money = float(input("'s net worth in millions: "))
-#print(donors_name, end = " ")
-their_money_actual = their_money * 1000000 #times a million
-their_money_net = their_money_actual - 13590 #subtract federal Poverty Level
+#A. get the name of the person who donated
+donation = 0
+#"The name of the person making the donation: "
 
-#print(format_as_dollars(their_money_actual), " is ", donors_name, "'s actual money")
-#print("$", '{0:,.2f}'.format(their_money_actual) , " is ", donors_name, "'s actual money")
+#B get input from the user, save as a float. Use the persons name in the request
+their_money_actual = 0
+#"'s net worth in millions: "
 
-#f'{their_money_actual:.2f}'
-donation = int(input("Enter the amount of the donation: "))
+#C get the amount of the donation. Save as a float
+#"Enter the amount of the donation: "
 
+#D get the net worth of the user. Save as a float
+your_money = 0
+#"Your (or ordinary person's) net worth: ")
 
-your_money = float(input("Your (or ordinary person's) net worth: "))
-your_money_net = your_money - 13590
-scaled_donation = (donation/their_money_net* your_money_net)
+#D calculate what the equivalent donation would be for a person of average net worth.
+# First figure out what percent of the donator's money (minus federal poverty level) the donation is, then
+# multiply that by the average persons net worth (minus federal poverty level)
+scaled_donation = 0
 
-#print("$",'{0:,.2f}'.format(donation), "donation for someone with a net worth of $",'{0:,.2f}'.format(their_money_actual) ,"is the same as a $",'{0:,.4f}'.format(scaled_donation), "donation for someone with a net worth of $",'{0:,.2f}'.format(your_money) )
+# Below is the final output for the user. You don't need to change anything as long as the variable names are the same
 print(format_as_dollars(donation), "donation for someone with a net worth of", format_as_dollars(their_money_actual) ,"is the same as a",format_as_dollars(scaled_donation), "donation for someone with a net worth of", format_as_dollars(your_money))
+
