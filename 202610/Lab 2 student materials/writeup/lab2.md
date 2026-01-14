@@ -1,6 +1,6 @@
 % CSCI 141 - Lab 2
-% Scott Wehrwein
-% Fall 2025
+% Caroline Hardin
+% Winter 2026
 
 ##### Goals
 
@@ -25,7 +25,7 @@ In this lab, you will learn the very basic elements of how to interact with the 
 
 2. In the terminal, you'll see a **prompt** that ends with a `$` sign. This is called the command line, or command prompt; you'll type commands here to interact with the system. Commands that you issue are interpreted by a program called a shell. The default shell, or command line language on the lab machines  is called `bash`; it is one of the many shells available in Linux.
 
-3. You’ll notice that the `$` is prepended with your username and an `@` followed by the name of the computer that you are logged into. For example, `wehrwes@cf162-03:~$` specifies the user `wehrwes` logged into the `cf162-03` machine.
+3. You’ll notice that the `$` is prepended with your username and an `@` followed by the name of the computer that you are logged into. For example, `lovelace@cf162-03:~$` specifies the user `lovelace` logged into the `cf162-03` machine.
 
 4. Anything you can do with the mouse when interacting with a windows environment you can also accomplish via the command line. In the following steps you will create a new directory (folder), navigate into that folder, and run a Python file, using only the command line. For these instructions, code and/or sample file content or output are displayed in code blocks like the one below. Type commands EXACTLY as they provided, and press return/enter to issue the command. For example:
 
@@ -41,7 +41,7 @@ In this lab, you will learn the very basic elements of how to interact with the 
    pwd
    ```
 
-   For me, this command outputs `/home/wehrwes`, my home directory.
+   For Ada Lovelace, this command outputs `/home/lovelace`, her home directory.
 
 6. List the files in your home directory with the `ls` (short for "list") command. Check to make sure your `csci141` folder from Lab 1 is there.
 
@@ -182,38 +182,38 @@ Here's a sample run of the completed code:
 
 ![Correct Calculator Output](fixed_calc.png)
 
-## Mortgage Calculator
+## Money Translator
+We've been reading in the news about celebrities, philanthropists, and CEOs who are donating their wealth. You can see examples of some of the stories online [[https://news.google.com/search?q=Billionaire%20donated&hl=en-US&gl=US&ceid=US%3Aen ]]. You may wonder how generous a million dollar donation _actually_ is for someone with, for example, a billion dollars? 
 
-Many online real estate websites have mortgage calculator features[^1]. These calculators ask for some information, such as the price of a home, the down payment (amount of the home price you'd pay up front), and the interest rate, then calculate the amount you'd have to pay monthly on a loan for the home.
+In this assignment, we'll create a money translator to translate the donation to the same percent of net worth as an ordinary person. 
 
-The formula used to calculate the monthly payment based on these inputs is as follows:
+To do the calculation, you'll enter as user input the name of the donor, the size of the donation, the net worth of the donor (in millions), and the net worth of an average person. You can see examples of average net worth at https://wallethacks.com/average-net-worth-by-age-americans/ . 
 
-$$
-M = (P-D) \frac{r (1 + r)^N}{(1+r)^N - 1}
-$$
+Next, you divide the donation by the donors net worth, to get the percent of their money they donated. Multiple that by the average person's net worth to get an equivalent donation, as seen below:
 
-Where: 
-- **M** — monthly payment  
-- **P** — price of the home  
-- **D** — down payment amount  
-- **N** — number of months over which the loan will be paid off  
-- **r** — monthly interest rate (`R × 0.01 / 12`, where `R` is the annual percentage rate)
+scaled_donation = (donation\donators_net_worth) *  average_net_worth
 
-Write a program called `mortgage.py` that takes command line arguments for $P, D, N,$ and $R$ (in that order), and outputs the monthly payment amount $M$. Notice that the user enters $R$, the annual interest rate as a percentage (e.g., 3.7), but the formula uses $r$, the monthly interest rate (e.g., 0.00308).
+It would be more fair to calculate the generosity of a donation as a percent of disposable income - after all, 1\% of your income when you're eating instant ramen is not the same as 1\% of your income when you have four mansions. For a rough approximation we'll use the US federal poverty level to stand in for 'minimum needed to survive' - set at  $15,650 for an individual in 2026. The calculation then would be updated to be:
+
+scaled_donateion = (donation\(donators_net_worth - fed_min)) *  (average_net_worth - fed_min)
+
+Write a program called `money_translator.py` that asks the user for the four pieces of input, and then outputs the result of the calculation. To help avoid the automated tests failing due to simple typing errors, I've provided most of the text output in the comments. I've also provided you the final output text which will work as long as you use the same variable names.
 
 Here's a sample invocation of the program:
 
-![](mortgage_noninteractive.png)
+![money_translator.png](Sample run of money translator)
 
 #### Test Cases
 
-You can check your program's correctness by making sure it matches the output for the test cases in the table below. For brevity, the output is truncated after 3 decimal places in the table below; your program will output more decimal places (as in the example invocation).
+You can check your program's correctness by making sure it matches the output for the test cases in the table below. To help the amounts display nicely as numbers, be sure that `format_as_money.py' is in the same folder as your code.
 
-|     $P$   |   $D$  | $N$ |  $R$  | Output ($M$) |
-| ----- | ------ | ----- | ---- | --------- |
-|   100000  | 20000  | 360 |  3.7  | 368.226      |
-|   1000000 | 10     | 180 |  3.4  | 7099.747     |
-|   549050  | 103200 | 800 |  5.1  | 1960.773     |
+|    Net worth of donor in millions  | Donation amount |  Average net worth  | Scaled donation amount |
+| ----- | -------- | -------- | --------- |
+|   1 | 100 |  100,000 | $8.76     |
+|    .2     | 1000 | 80,000  | $356.26   |
+|    240,000 | 5,000,000 |  40,000  | $0.34   |
+
+If you find it tedious to type in the amounts while testing, you may wish to substitute in command line arguments during the development, and switch that out for the input statements after it's working.
 
 ## Submission
 
@@ -221,7 +221,7 @@ Upload the following files to Canvas:
 
 -   `broken_calculator.py` 
 
--   `mortgage.py`
+-   `money_translator.py`
 
 -   (if the TA has not checked in lab already) A screenshot showing your terminal window having run `adder.py` from your `lab2` directory using the command line.
 
@@ -232,7 +232,6 @@ This lab is graded out of a total of 10 points:
 
 * 2 points: you successfully ran your renamed `adder.py` program from Lab 1 from the Linux command line
 * 3 points: `broken_calculator.py` works as expected while only using the `%`, `//`, $+$ and $*$ operators
-* 3 points: `mortgage.py` produces the correct output
+* 3 points: `money_translator.py` produces the correct output
 * 2 points: Both files have a comment at the top and follow good coding practices
 
-[^1]: See <https://www.zillow.com/mortgage-calculator/> for an example
