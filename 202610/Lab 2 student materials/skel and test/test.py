@@ -2,6 +2,7 @@
 # April 2025
 # Auto grader for Lab 2, based on early POTD tests
 # Updated January 2026 by Caroline Hardin to add in money translator
+# Updated 1/13/26 to fix some minor typos by Joshua Kelley
 
 import pytest
 import subprocess
