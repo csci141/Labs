@@ -144,7 +144,7 @@ Notice that for each decimal, we also multiply in a factor of 0.1 to make sure t
               = 361.08 
 
 
-1.  Download [broken_calculator.py](broken_calculator.py)  and save it to your `lab2` folder.
+1.  Download [broken_calculator.py](../skel%20and%20test/broken_calculator.py)  and save it to your `lab2` folder.
 
 2.  That file is incomplete. Only two lines of code have been written, which you are not allowed to edit. The rest are comments. Lines of code that say `# COMPLETE THE CODE` you will need to write. Read the comments for each section to get a sense of what code you need to write. Also, the number of COMPLETE THE CODE comments in that file is how many lines of python code I wrote in my solution. It's okay if your solution uses fewer lines of code, or more, but each block of code should accomplish what the comment above it specifies.
 
