@@ -51,9 +51,9 @@ def test_broken_calculator(input_a, input_b, answer):
 
 
 @pytest.mark.parametrize("name,net,donation,avgnet,answer", [
-    ("Alice", 1, 100, 100000,"$100.00 donation for someone with a net worth of $1,000,000.00 is the same as a $8.76 donation for someone with a net worth of $100,000.00"),
-    ("Old Aunt Sue", .2, 1000, 80000,"$1,000.00 donation for someone with a net worth of $200,000.00 is the same as a $356.26 donation for someone with a net worth of $80,000.00"),
-    ("Jeff", 240000, 5000000, 40000,"$5,000,000.00 donation for someone with a net worth of $240,000,000,000.00 is the same as a $0.34 donation for someone with a net worth of $40,000.00"),
+    ("Alice", 1, 100, 100000,"$100.00 donation for someone with a net worth of $1,000,000.00 is the same as a $8.57 donation for someone with a net worth of $100,000.00"),
+    ("Old Aunt Sue", .2, 1000, 80000,"$1,000.00 donation for someone with a net worth of $200,000.00 is the same as a $349.06 donation for someone with a net worth of $80,000.00"),
+    ("Jeff", 240000, 5000000, 40000,"$5,000,000.00 donation for someone with a net worth of $240,000,000,000.00 is the same as a $0.51 donation for someone with a net worth of $40,000.00"),
    
 ])
 
@@ -64,7 +64,7 @@ def test_money(name,net,donation,avgnet,answer):
     assert err == ''
 
     try:
-        assert out.strip == answer
+        assert out.strip() == answer
     except:
         pass
 
