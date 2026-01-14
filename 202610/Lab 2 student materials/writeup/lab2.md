@@ -215,6 +215,10 @@ You can check your program's correctness by making sure it matches the output fo
 
 If you find it tedious to type in the amounts while testing, you may wish to substitute in command line arguments during the development, and switch that out for the input statements after it's working.
 
+This is an example of using Python to do something interesting: many of us and our friends and family have been _far_ more generous than the donations which make headlines! A fun conversation starter to pull up next time you're watching the news.
+
+To complete this project, you'll need to use \ttt{input()}, \ttt{int()}, \ttt{float()}, \ttt{print()} with \ttt{end} settings,
+
 ## Submission
 
 Upload the following files to Canvas:
