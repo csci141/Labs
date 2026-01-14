@@ -1,7 +1,7 @@
 # Nicholas J Uhlhorn
 # April 2025
 # Auto grader for Lab 2, based on early POTD tests
-# Scott Werwein | CSCI 141 | Spring 2025
+# Updated January 2026 by Caroline Hardin to add in money translator
 
 import pytest
 import subprocess
@@ -49,20 +49,22 @@ def test_broken_calculator(input_a, input_b, answer):
     except:
         pass
 
-@pytest.mark.parametrize("p,d,n,r,answer", [
-    (100000, 20000, 360, 3.7, 368.226),
-    (1000000, 10, 180, 3.4, 7099.747),
-    (549050, 103200, 800, 5.1, 1960.773),
+
+@pytest.mark.parametrize("name,net,donation,avgnet,answer", [
+    ("Alice", 1, 100, 100000,"$100.00 donation for someone with a net worth of $1,000,000.00 is the same as a $8.76 donation for someone with a net worth of $100,000.00"),
+    ("Old Aunt Sue", .2, 1000, 80000,"$1,000.00 donation for someone with a net worth of $200,000.00 is the same as a $356.26 donation for someone with a net worth of $80,000.00"),
+    ("Jeff", 240000, 5000000, 40000,"$5,000,000.00 donation for someone with a net worth of $240,000,000,000.00 is the same as a $0.34 donation for someone with a net worth of $40,000.00"),
+   
 ])
-def test_mortgage(p, d, n, r, answer):
-    '''Tests the output of mortgage.py on different number combos'''
-    out, err, code = run_file('mortgage.py', '', str(p), str(d), str(n), str(r))
+
+def test_money(name,net,donation,avgnet,answer):
+    '''Tests the output of money_translator.py on different number combos'''
+    out, err, code = run_file('money_translator.py', f'{name}\n{net}\n{donation}\n{avgnet}')
 
     assert err == ''
 
     try:
-        out_float = float(out)
-        assert f"{out_float:.3f}"== answer
+        assert out.strip == answer
     except:
         pass
 
