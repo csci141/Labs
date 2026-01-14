@@ -193,7 +193,7 @@ scaled_donation = (donation\donators_net_worth) *  average_net_worth
 
 It would be more fair to calculate the generosity of a donation as a percent of disposable income - after all, 1\% of your income when you're eating instant ramen is not the same as 1\% of your income when you have four mansions. For a rough approximation we'll use the US federal poverty level to stand in for 'minimum needed to survive' - set at  $15,650 for an individual in 2026. The calculation then would be updated to be:
 
-scaled_donateion = (donation\(donators_net_worth - fed_min)) *  (average_net_worth - fed_min)
+scaled_donation = (donation\(donators_net_worth - fed_min)) *  (average_net_worth - fed_min)
 
 Write a program called `money_translator.py` that asks the user for the four pieces of input, and then outputs the result of the calculation. To help avoid the automated tests failing due to simple typing errors, I've provided most of the text output in the comments. I've also provided you the final output text which will work as long as you use the same variable names.
 
