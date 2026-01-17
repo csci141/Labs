@@ -3,6 +3,7 @@
 # Auto grader for Lab 2, based on early POTD tests
 # Updated January 2026 by Caroline Hardin to add in money translator
 # Updated 1/13/26 to fix some minor typos by Joshua Kelley
+# Updated 1/15/26 to fix test bugs - Eric Furukawa
 
 import pytest
 import subprocess
@@ -45,10 +46,7 @@ def test_broken_calculator(input_a, input_b, answer):
 
     assert err == '' 
     
-    try:
-        assert f"{float(out.split(' ')[-1]):.2f}" == answer
-    except:
-        pass
+    assert abs(float(out.split(' ')[-1]) - float(answer)) < .0000001
 
 
 @pytest.mark.parametrize("name,net,donation,avgnet,answer", [
@@ -64,10 +62,6 @@ def test_money(name,net,donation,avgnet,answer):
 
     assert err == ''
 
-    try:
-        assert out.strip() == answer
-    except:
-        pass
+    assert answer in out
 
 pytest.main(["test.py", "-vv", "--showlocals", "-p", "no:faulthandler"])
-
