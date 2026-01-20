@@ -118,6 +118,31 @@ These rules are quite subjective and you'll need more experience before you can 
 
 For all the labs in this course, commenting and code style is a portion of the rubric. With the exception of requiring the Author/Date/Description comment at the top, we will only take points off for fairly severe style issues.
 
+
+#### Using `print` with `sep` and `end`
+
+Sometimes we want to have better control over how something looks when we print it. The lecture notes and textbook tell you about using the keywords `sep` and `end`. Adding `sep=""` (short for "separator") after the rest of the regular arguments prevent print from adding spaces between items that you want printed. If you use `sep=""`, the only spaces that are included in the output are the spaces that you place explicitly into the Strings. For example:
+
+    print("Taking", "CSCI", 141, "woo-hoo!")
+
+prints the following:
+
+    Taking CSCI 141 woo-hoo!
+
+but
+
+    print("Taking", "CSCI", 141, "woo-hoo!", sep="")
+
+would print the following:
+
+    TakingCSCI141woo-hoo!
+
+Recall that the `print` function defaults to `" "` as the separator between the arguments it prints. If you want a different separator, you can give any string to the `sep` argument, such as the empty string (`sep=""`) or a comma (`sep=","`), or any other string you'd like (e.g., `sep=", uhh, "`). Try out a few calls to `print` with different separators in the interactive Shell pane in Thonny.
+
+Once you have a feel for the usage of `sep`, play around with the `end` keyword argument, which specifies what gets printed after all the arguments are printed and defaults to `\n`, the newline character, which moves the "cursor" to the beginning of the next line so anything printed afterwards appears on the next line.
+
+Try running a few `print` commands with `end` specified to get a feel for its behavior. These can be very helpful in making your output nicer to read!
+
 ## Broken Calculator
 
 To help you practice your understanding of operators and operands, in this section you will solve the following programming problem: **The period key on your keyboard is broken, but you would like to multiply two numbers with a decimal digit.**
