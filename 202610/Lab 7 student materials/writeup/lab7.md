@@ -1,110 +1,77 @@
 % CSCI 141 - Lab 7
 % Scott Wehrwein
-% Winter 2023
+% Fall 2025
+
+**Goals**
+
+* Practice with lists, dictionaries, and file I/O
+* Get experience processing data in a real-world context
 
 ## Introduction
 
-In this lab you'll gain practice using and manipulating strings. In lecture you've seen how to iterate over the characters in a string, access individual characters by index, and how to slice out substrings. We also touched on a few of the multitude of methods that can be called on string objects, including `upper`, `lower`, `find`, and `replace`.
+In this lab, you'll write a program to read historical earthquake data from a file and plot each earthquake on a map using turtle graphics. An example output is shown here:
 
-Suppose you are an employee at a software company called Lotter.io. You have been tasked with writing a Python program that will simulate the drawing of a winning lottery pick, then prompt a user to guess the lottery pick, and inform the user if their pick is the winning pick.
 
-Your company's secret sauce that will guarantee its explosive growth into a billion-dollar ("unicorn") startup is that the lottery doesn't just involve guessing numbers: Instead, this lottery involves both words *and* digits. A lottery pick is made up of one of three words (e.g., `baker`, `shucksan`, or `glacier`), and one of three digits (e.g., $1$, $2$, or $3$), arranged either with the word first or the number first. For example, `shucksan1`, and `2baker` are both possible winning picks. The user only wins if the correct word and the correct digit are guessed in the correct order.
+![The output from my solution code. ](correct_output.png)
 
-The program consists of four subtasks:
+## Setup
 
-0.  Determine the game mode.
+Create a `lab7` directory in your lab environment of choice. Download the following files from the course webpage and place them in your lab7 folder:
 
-1.  Based on the game mode, either generate a winning pick randomly or use the user-supplied pick.
+-   [plot_earthquakes.py](plot_earthquakes.py) - this file contains skeleton code and pseudocode
 
-2.  Get a valid guess from the user.
+-   [earthquakes.csv](earthquakes.csv) - this file contains the data you'll be reading
 
-3.  Check the user's guess against the winning pick and tell them how they did.
+-   [earth.png](earth.png) - this will be set as the background image in the turtle graphics canvas (this is done for you by the `turtle_setup` function given in the skeleton code).
 
-Three sample invocations are shown in below.
+## Approach and Guidelines
 
-![](sample_runs.png)
+Your main tasks are as follows. Follow the same coding style conventions we've been using up to this point: comment at the top, good variable naming, and so on.
 
-## Determine the Game Mode
+* Implement the `parse_row` function to read an earthquake record into a dictionary
+* Impelement the `get_max_magnitude` function to find the largest magnitude over all the earthquakes
+* Implement the remainder of the `main` function according to the pseudocode included in comment
 
-The main program is implemented inside the `main` function, which is called at the bottom of the program inside a main guard. Your first (`0`th) task is to determine the game mode based on the command line arguments.
+You'll find that you need many of the structures and concepts we've covered in this course to complete this task - ask your TA if you encounter any problems, and use this opportunity to take note of any topics you need to brush up on before the final exam. You may find it helpful to create some additional helper functions to handle subtasks of the main program and keep the code manageable.
 
-As in the Guessing Game problem from A3, the lottery program will have a debugging mode which allows the person running the program to specify the winning pick. The game mode is determined as follows:
+Some hints:
 
--   If the program is run with no command line arguments, the game runs in its regular (player) mode, and the winning pick is randomly generated.
+-   The algorithm given in the pseudocode reads each line of the CSV file into a dictionary, appending each dictionary to a list. Each dictionary has the same four keys, corresponding to the column headers; its values are the values for those columns in the given row. This gets us a list of earthquake records whose properties can be accessed by name, (e.g., `quakes[3]["magnitude"]` would give the magnitude of the fourth earthquake in the CSV file, assuming you called the list `quakes`).
 
--   If the program has at least one command line argument, the winning pick is set to the first command line argument. You should assume that the command line argument is a valid pick; you do **not** need to verify this. This feature will be useful for you in debugging (and for us in rading!).
+-   The first line of the file contains column headers, so you'll need to skip over it before starting to read data.
 
-We've been using command line arguments since A2, but at this point we've actually seen everything we need to understand the syntax. Recall that we access command line arguments inside our programs by first importing the `sys` module:
+-   Plotting earthquakes on the map is quite simple: the map image (and turtle canvas) is 720x360 pixels, with (0,0) in the center. Longitude (the $x$ axis) goes from -180 to 180 and latitude ($y$ axis) goes from -90 to 90, so (0,0) is in the center. To get the canvas $(x, y)$ coordinates based on a given (lon, lat) coordinate, simply multiply each coordinate by 2.
 
-    import sys
+-   The skeleton includes an implementation of the `teleport` function from Lab 5.
 
-and then accessing the individual arguments as `sys.argv[i]` to get the `i`th command line argument. We can now see that what's actually happening here is that inside the `sys` module lives a special variable called `argv`, which points to a `list` of command line arguments, and we're simply *indexing* into that list to get access to each argument.
+-   You can use a turtle object's `circle` method to draw a circle. See the documentation for details on how to use it.
 
-There's one more quirk: lists indices start at zero, but the command line argument indices start at 1. This is because of a convention in Python that `sys.argv[0]`, the first element of the arguments list, stores the name of the program that was run. You can see this for yourself by printing `sys.argv[0]` in any program: you'll find that it contains the name of the file containing the program.
-
-A consequence of `sys.argv` being a `list` is that you can have your program's behavior depend on the number of arguments given, as prescribed above, by simply checking the value of of `len(sys.argv)`. Just keep in mind that a length of 1 means there were no arguments, a length of 2 means there was one argument, and so on.
-
-## Generate a winning pick
-
-The `random_pick` function is responsible for choosing a random winning pick. The function header, specification, and some basic pseudocode comments have been written for you. The random pick is a randomly chosen word from the `words` list and a randomly chosen number from the `numbers` list, concatenated in a randomly chosen order. So in the case of our program, the following are all valid picks:
-
--   baker3
-
--   1baker
-
--   shucksan2
-
--   2glacier
-
-You may find the `random` module's `choice` function useful.
-
-## Get a pick from the user
-
-Implement the `get_guess` function to prompt the user, repeatedly if necessary, until they enter a guess that:
-
-* contains one of the words, and
-* begins or ends with one of the numbers. 
-
-Notice that these criteria do not prevent all possible invalid strings (e.g., `mountbakery3` contains one of the words and ends with one of the numbers), but it eliminates many invalid guesses. The function header, specification, and pseudocode for this part are provided in the skeleton code. *Hint:* to check whether the guess contains a valid word, you might be tempted to check whether the guess is a member of the list of words; this won't work because the guess also has a number. Instead, I recommend checking whether each of the valid words is a substring of the guess string.
-
-## Check the user's pick
-
-Now, we need to tell the user whether any or all aspects of their pick were correct. Here's what the program should do once it has determined the winning pick and the user's pick. Your messages should convey the same content but otherwise you can be creative with them. Feel free to decide on your own prize for guessing the winning pick.
-
--   If the user inputs a pick that exactly matches the winning pick character for character, the program outputs a message telling the user they've won.
-
--   If the user's word and number both match the winning pick, but their pick doesn't match the winning pick exactly, print *You guessed the correct number and word, but in the wrong order or with extra characters.*
-
--   If the number matches but the word doesn't, print *You guessed the correct number but not the correct word.*
-
--   If the word matches but the digit isn't correct: print *You guessed the correct word but not the correct number.*
-
--   If neither the word nor number are correct, print *You guessed neither the correct word nor the correct number.*
-
-They do not get another guess - if they want to try again they’ll have to try a new lottery!
-
-The `main` function includes calls to the two functions you completed in the prior tasks, followed by pseudocode for this step. You may want to, but are not required to, create a separate function to accomplish this task.
-
-## Getting Started
-
-Download the skeleton code `lottery.py` [here](lottery.py). Open up and read through the skeleton code, making sure that you understand the provided code and function specifications. We recommend completing the three tasks in the order described above.
-
-You may find the `in` and `not in` operators useful on strings, as well as indexing individual characters of a string and slicing substrings. Review the lecture slides for details on the syntax for these operators. Don't forget that when a program's logic gets complicated, it can be helpful to define boolean variables to keep the conditions of `if/elif` statements short and easy to read.
+-   The circle colors and radii depend on the magnitude relative to the maximum magnitude. For example, the the red color should be 0 if the magnitude is 0 and 255 for the largest magnitude. This means we need to scale the quake's magnitude by a factor of $\frac{255}{m_{\max}}$ where $m_{\max}$ is the largest magnitude in the dataset.
 
 ## Submission
 
-Submit your completed program `lottery.py` file via Canvas.
+Take a screenshot of your program's output and save it as `earthquakes.png`. Submit `earthquakes.png` and `plot_earthquakes.py` to Canvas.
 
 ## Rubric
 
-This lab is graded out of 30 points.
+This lab is graded out of 10 points:
 
-* 1 point: Comment at the top of program specifies author, date, and description
-* 3 point: Command line argument is used as the winning pick if specified
-* 3 points: Random pick is generated if there are no command line arguments
-* 3 points: in `get_guess`, user is prompted again if guess doesn't contain one of the words
-* 4 points: in `get_guess`, user is prompted again if guess doesn't begin or end with one of the numbers   
-* 4 points: message printed for correct pick
-* 4 points: message printed for correct word and number but incorrect order
-* 4 points: message printed for correct word but not number, and vice versa
-* 4 points: message printed for neither correct
+* 5 points: The program reads the earthquake data into a list of dictionaries
+* 2 points: The maximum magnitude is calculated correctly
+* 2 points: A circle is drawn at the correct coordinates for each earthquake
+* 1 points: The circle's size and color varies linearly with the earthquake's magnitude
+
+**Possible Deductions**
+
+* -1 point: Author, date, and program description comment at the top of the file is missing
+* -1 point: inadequate or inappropriate use of comments, poor variable naming, or other coding style issues
+
+## Challenge - Anagrams
+
+An *anagram* of a word is a different word spelled using the same letters. For instance, "elbow" is an anagram of "below". For purposes of this problem, we'll consider only anagrams that use exactly the same letters, without leaving any out or repeating letters more times than they appear in the original word. For example, "bow" and "bellow" are not considered anagrams of "below" for purposes of this problem.
+
+Download [words.txt](words.txt) and write a program that finds the largest set of 6-letter words that are all anagrams of each other. As an example, among 3-letter words, there are two sets that tie for largest: `[’tea’, ’eat’, ’eta’, ’ate’]` and `[’aer’, ’ear’, ’are’, ’era’]`.
+
+My program is able to find the three-letter sets in a second or two on my laptop. Finding the 6-letter set takes a little longer - around 45 seconds. I didn't import any modules from the standard library, but you may if you'd like---`itertools` might be particularly helpful. For the sake of efficiency, you may want do some thinking and/or research into what kind of collection you store things in; lists may not always be the best choice.
+
+Name your program `anagram.py` and submit it to Canvas for up to 2 points of extra credit. One point is awarded for a correct solution; the second point is awarded for solving it without importing any modules.
