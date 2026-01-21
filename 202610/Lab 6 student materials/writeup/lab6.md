@@ -1,6 +1,6 @@
 % CSCI 141 - Lab 6
-% Scott Wehrwein
-% Fall 2025
+% Caroline Hardin
+% Winter 2026
 
 **Goals**
 

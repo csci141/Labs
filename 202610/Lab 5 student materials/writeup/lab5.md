@@ -1,7 +1,6 @@
 % CSCI 141 - Lab 5
-% Scott Wehrwein
-% Fall 2025
-
+% Caroline Hardin
+% Winter 2026
 **Goals**:
 
 * Get practice writing functions
