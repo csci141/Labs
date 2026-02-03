@@ -157,7 +157,7 @@ This lab is graded out of 10 points:
 * 2 points: `turtledraw.py` draws at least one instance of the pattern
 * 2 points: `turtledraw.py` draws three copies of the pattern in the correct corner positions using loops
 * 2 points: `turtledraw.py` draws the pattern quickly and without animation and includes `turtle.done()` as the last line.
-* 1 point: 'turtledraw.py' uses at least 3 colors. 
+* 1 point: `turtledraw.py` uses at least 3 colors. 
 
 Deductions may be made for style issues. Make sure your program adheres to the following good coding practices:
 
