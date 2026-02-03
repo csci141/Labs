@@ -71,7 +71,7 @@ Each pattern is identical, and is simply composed of many squares with side leng
 
 ### Drawing a Square
 
-Start by writing code to draw a square with side length 100. Recall that you saw an example like this in lecture - you may want to download `turtle_square.py` from the `code` folder linked from Lecture 09 on the course webpage as a starting point. After this step, your program should generate the following picture:
+Start by writing code to draw a square with side length 100. Recall that you saw an example like this in lecture. After this step, your program should generate the following picture:
 
 ![Drawing a square with side length 100](turtlesquare.png){#fig:turtlesquare width="50%"}
 
