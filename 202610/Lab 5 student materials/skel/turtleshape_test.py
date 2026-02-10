@@ -9,6 +9,7 @@
 
 import turtle # import the turtle module
 import turtleshape as ts # import student functions from turtleshape.py
+from save_canvas import save_canvas
 
 
 def test_draw_square(t, x, y):
@@ -120,13 +121,6 @@ def test_teleport(t, x, y):
 
     turtle.update()
 
-def save_canvas(t, base_name):
-    """ Save the turtle canvas that t lives on as an eps file called
-        {base_name}.eps. """
-    screen = t.getscreen()
-    canvas = screen.getcanvas()
-    canvas.postscript(file=base_name + '.eps')
-
 if __name__ == "__main__":
 
     t = turtle.Turtle()
@@ -150,18 +144,19 @@ if __name__ == "__main__":
     # should match the drawing in the lab handout. Do not modify
     # these lines, except to uncomment them.
 
-#    test_draw_square(t, -200, -200)
+    test_draw_square(t, -200, -200)
 
-#    test_draw_rectangle(t, -200, 0)
+    test_draw_rectangle(t, -200, 0)
 
-#    test_draw_triangle(t, -100, 100)
+    test_draw_triangle(t, -100, 100)
 
-#    test_teleport(t, -200, 150)
+    test_teleport(t, -200, 150)
 
-#    test_draw_polygon(t, 100, 0)
+    test_draw_polygon(t, 100, 0)
 
-#    test_draw_snowflake(t, 50, -200)
+    test_draw_snowflake(t, 50, -200)
     
     save_canvas(t, "turtleshape")
-
+    
     turtle.done()
+
