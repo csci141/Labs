@@ -5,3 +5,5 @@ def save_canvas(t, base_name):
     canvas = screen.getcanvas()
     canvas.postscript(file=base_name + '.eps')
 
+#add your other functions here!
+
