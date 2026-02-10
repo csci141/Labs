@@ -240,9 +240,10 @@ When basic movement is working, the gradient-colored grid of dots should appear 
 
 #### Image
 
-Each time you run the `turtleshape_test.py` program, it saves out an image of the test drawing as `turtleshape.eps`. When you're done, find  `turtleshape.eps` (it should be in the same folder as your code), and submit that to Canvas along with your code.
+Each time you run the `turtleshape_test.py` program, it saves out an image of the test drawing as `turtleshape.eps`. When you're done, find  `turtleshape.eps` (it should be in the same folder as your code), **convert it to a png**, and submit `turtleshape.png` to Canvas along with your code.
 
 > Note: .eps is an image file format (like png or jpeg). If you're on the Linux lab machines, double clicking this file should open it in a viewer. If you're on Windows, it may not be natively viewable without installing a third-party viewer.
+> Recomended web converter for eps to png: https://cloudconvert.com/eps-to-png
 
 ## 3. Drawing
 
@@ -290,11 +291,11 @@ Your code should use at least one loop and make use of at least two of the funct
 
 #### Image
 
-Recall that `turtleshape_test.py` saved an image of the canvas that it drew. It did so using the `save_canvas` function, which is implemented in `turtleshape_test.py`. Let's use that same function to save an image our your drawing as well: import `turtleshape_test` in `turtleshape.py` and add a call to its `save_canvas` function to save your drawing as `drawing.eps`. Submit `drawing.eps` to Canvas alongside your code.
+Recall that `turtleshape_test.py` saved an image of the canvas that it drew. It did so using the `save_canvas` function, which is implemented in `turtleshape_test.py`. Let's use that same function to save an image our your drawing as well: import `turtleshape_test` in `turtleshape.py` and add a call to its `save_canvas` function to save your drawing as `drawing.eps`, **convert this file to png like before**. Submit `drawing.png` to Canvas alongside your code.
 
 ## Submission
 
-Submit `turtleshape.py`, `turtleshape.eps`, and `drawing.eps` to the Lab 5 assignment on Canvas. Even if your TA has checked you off, you still need to submit to Canvas.
+Submit `turtleshape.py`, `turtleshape.png`, and `drawing.png` to the Lab 5 assignment on Canvas. Even if your TA has checked you off, you still need to submit to Canvas.
 
 ## Rubric
 
@@ -310,7 +311,7 @@ This lab is graded out of 10 points.
 
 * 1 point:  Your drawing code is is inside a main guard in `turtleshape.py`
 * 1 point:  Your drawing code uses at least one loop and two of the functions you implemented
-* 1 point: Both drawings (`turtleshape.eps` and `drawing.eps`) are submitted to Canvas alongside `turtleshape.py`.
+* 1 point: Both drawings (`turtleshape.png` and `drawing.png`) are submitted to Canvas alongside `turtleshape.py`.
 * 1 point: Your drawing code finishes in a few seconds
 
 **Possible Deductions**
@@ -318,5 +319,6 @@ This lab is graded out of 10 points.
 * -1 point: Author, date, and program description comment at the top of the file is missing
 * -1 point: inadequate or inappropriate use of comments, poor variable naming, or other coding style issues
 * -1 point: `draw_snowflake` does not make use of `draw_polygon`
+* -1 point: turning in a .eps file instead of a .png
 
 [^1]: I didn't call it `sum` because that's already the name of a builtin function; it's syntactically valid to create a variable with that name, but it "hides" the builtin function so you can't use it anymore because `sum` now refers to a variable. It's good practice to avoid this sort of "hiding" of built-in functions.
