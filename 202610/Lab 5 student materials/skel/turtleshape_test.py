@@ -163,3 +163,5 @@ if __name__ == "__main__":
 #    test_draw_snowflake(t, 50, -200)
     
     save_canvas(t, "turtleshape")
+
+    turtle.done()
