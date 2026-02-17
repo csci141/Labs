@@ -18,6 +18,7 @@ def turtle_setup(canv_width, canv_height):
     screen = t.getscreen()
     screen.setup(canv_width, canv_height)
     screen.setworldcoordinates(0, 0, canv_width, canv_height)
+    turtle.colormode(255) # specify how colors are set: we'll use 0-255
 
     t.up() # lift the pen
     t.hideturtle() # hide the turtle triangle
