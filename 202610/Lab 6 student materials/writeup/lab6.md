@@ -29,7 +29,7 @@ This process will generate a Sierpinski Triangle like the one pictured below.
 
 ## Details
 
-### Skeleton Code {#skeleton-code .unnumbered}
+### Skeleton Code
 
 You are provided with a skeleton code file [sierpinski.py](sierpinski.py) containing some code to help get you started, including a function that sets up the Turtle graphics window for our somewhat nontraditional turtle use case. Read through the skeleton code. You need not understand every detail of the code I've written, but you must **carefully read and understand the specification for the** `turtle_setup` **function**: this takes care of creating a turtle, resizing the window to the desired dimensions, and several other details that I don't want you to have to write the code for. Your code should call `turtle_setup` function before beginning the chaos game iterations, and proceed to use the turtle it returns to do all your pixel coloring.
 
