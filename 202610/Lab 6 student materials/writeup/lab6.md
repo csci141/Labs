@@ -35,7 +35,7 @@ You are provided with a skeleton code file [sierpinski.py](sierpinski.py) contai
 
 The `turtle_setup` function changes the window so its coordinate system now has (0,0) at the bottom left corner (instead of the default, with (0,0) in the center. The positive $x$ axis points right and positive $y$ axis points up, so the top left corner is at (`0, canv_height`), the bottom right corner is at (`canv_width, 0`), and the top right is at (`canv_width, canv_height`). This helps to simplify the math when locating corners of the triangle. The setup function also calls `tracer(0, 0)`, which you may recall disables automatic re-drawing of the canvas. This means that to get your picture to show up, **you need to call `turtle.update()`** yourself. For the sake of speed, I recommend re-drawing the picture only every 100 or every 1000 iterations so the drawing doesn't take too long.
 
-### Coloring Pixels with Turtles {#coloring-pixels-with-turtles .unnumbered}
+### Coloring Pixels with Turtles
 
 In this program, we're not really using turtles for what they were meant for. Instead of drawing lines as the turtle moves, we'll use the turtle to color individual pixels on the canvas. Turtles draw as they move, but they can also stamp shapes, such as circles and dots; we'll make use of the aptly named `dot` method. To fill in a pixel, all you need to do is move the turtle to that pixel, then draw a dot of size 1. If nothing shows up when you use a dot size of 1 (this seems to happen on some Windows systems), using a dot size of 2 is also fine.
 
