@@ -144,17 +144,17 @@ if __name__ == "__main__":
     # should match the drawing in the lab handout. Do not modify
     # these lines, except to uncomment them.
 
-    test_draw_square(t, -200, -200)
+    #test_draw_square(t, -200, -200)
 
-    test_draw_rectangle(t, -200, 0)
+    #test_draw_rectangle(t, -200, 0)
 
-    test_draw_triangle(t, -100, 100)
+    #test_draw_triangle(t, -100, 100)
 
-    test_teleport(t, -200, 150)
+    #test_teleport(t, -200, 150)
 
-    test_draw_polygon(t, 100, 0)
+    #test_draw_polygon(t, 100, 0)
 
-    test_draw_snowflake(t, 50, -200)
+    #test_draw_snowflake(t, 50, -200)
     
     save_canvas(t, "turtleshape")
     
